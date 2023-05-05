@@ -4,7 +4,7 @@ import { Image, ImageStyle, ImageSourcePropType, StyleSheet, TouchableOpacity, V
 import { AppTheme } from '../../config/DefaultConfig';
 import Ions from 'react-native-vector-icons/Ionicons';
 import useTheme from "../../hooks/useTheme";
-import ImagePicker from 'react-native-image-picker';
+// import ImagePicker from 'react-native-image-picker';
 
 interface Props {
     userImageSource: ImageSourcePropType;
@@ -31,22 +31,22 @@ const PhotoUpload: React.FunctionComponent<Props> = ({
         },
     };
 
-    ImagePicker.showImagePicker(options, response => {
-        console.log('Response = ', response);
+    // ImagePicker.showImagePicker(options, response => {
+    //     console.log('Response = ', response);
   
-        if (response.didCancel) {
-          console.log('User cancelled photo picker');
-        } else if (response.error) {
-          console.log('ImagePicker Error: ', response.error);
-        } else if (response.customButton) {
-          console.log('User tapped custom button: ', response.customButton);
-        } else {
-          let source = {uri: response.uri};
+    //     if (response.didCancel) {
+    //       console.log('User cancelled photo picker');
+    //     } else if (response.error) {
+    //       console.log('ImagePicker Error: ', response.error);
+    //     } else if (response.customButton) {
+    //       console.log('User tapped custom button: ', response.customButton);
+    //     } else {
+    //       let source = {uri: response.uri};
   
-          onBrowseImage(source);
-          setSaveItem(false);
-        }
-      });
+    //       onBrowseImage(source);
+    //       setSaveItem(false);
+    //     }
+    //   });
     }
 
     return (

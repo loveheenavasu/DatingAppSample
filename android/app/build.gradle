@@ -127,7 +127,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
     defaultConfig {
         applicationId "com.recraftreactnativedatingapp"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -181,7 +180,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation "com.facebook.react:react-native:"  // From node_modules
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
