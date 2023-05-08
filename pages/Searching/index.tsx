@@ -53,7 +53,7 @@ const Searching: React.FunctionComponent<Props> = ({ history }: Props) => {
               <View style={[style.childContainer, style.extraStyle]}>
                 <View style={style.outerContainer}>
                   <View style={style.iconContainer}>
-                    <Image source={girl} style={style.logoImage} />
+                    <FastImage source={girl} style={style.logoImage} />
                   </View>
                 </View>
               </View>
